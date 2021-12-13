@@ -4,6 +4,9 @@ If target exists, then return its index. Otherwise, return -1.
 
 You must write an algorithm with O(log n) runtime complexity. */
 
+/* ARRAY BINARY SEARCH
+O(log n) */
+
 var search = function(nums, target){
     var left = 0;
     var right = nums.length - 1;
