@@ -7,7 +7,7 @@ You must write an algorithm with O(log n) runtime complexity. */
 var search = function(nums, target){
     var left = 0;
     var right = nums.length - 1;
-    var middle = Math.floor((right - left) / 2);
+    var middle = Math.floor(left + ((right - left) / 2));
     
     while(left <= right){
         if(nums[middle] == target){
@@ -28,7 +28,6 @@ var search = function(nums, target){
         }
         if(target > nums[middle]){
             left = middle + 1;
-            middle = Math.floor(left + ((right - left) / 2));
         }
     }
     console.log("target not in array");
